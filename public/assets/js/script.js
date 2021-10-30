@@ -3,9 +3,7 @@
  * @param {String} array-array of element to insert in the rows 
  * @param {Number} size- numbers of colums
  */
-const createTable=(array,size)=>{
-    console.log(...array)
-    console.log(array)
+const createTable=(array,size)=>{ 
     var trg = document.getElementById('table_container')
     var thead = document.createElement('table')
     var tbody = document.createElement("tbody")
@@ -14,7 +12,7 @@ const createTable=(array,size)=>{
     for (let y = 0; y < 2; y++) {
         let row = document.createElement('tr');
         if (y== 0){
-            for (let i=0 ;i<size; i++){
+            for (elem in array){
             let cell = document.createElement('td');
             cell.innerHTML = ("Name")
             row.appendChild(cell);
