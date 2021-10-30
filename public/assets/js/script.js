@@ -20,8 +20,19 @@ const createTable=(array,index)=>{
             } 
         tbody.appendChild(row);
 }
+// Data Init
 const runBtn =document.getElementById("generate")
 const resetBtn =document.getElementById("reset")
+const sizeinput =document.getElementById("size")
+// Input Control
+sizeinput.addEventListener("change",(e)=>{
+  if((Number(e.target.value)<3) || (Number(e.target.value)>5)) { 
+    document.getElementById('generate').disabled = true; 
+} else { 
+    document.getElementById('generate').disabled = false;
+}
+})
+// Generate Table Button Listener
 runBtn.addEventListener("click",()=>{
     //Ask for the database
     fetch('./assets/data/db.json').then(response => {
@@ -29,7 +40,7 @@ runBtn.addEventListener("click",()=>{
         return response.json();
       }).then(data => {
           // create random groups
-        const size =Number(document.getElementById("size").value)
+        size =Number(document.getElementById("size").value)
           let n_groups=(data.swartz.length)/size
           let temp_array=data.swartz
           let left=data.swartz.length
@@ -48,6 +59,7 @@ runBtn.addEventListener("click",()=>{
         console.log("Error Reading data " + err);
       });
 })
+// Reset Button Listener
 resetBtn.addEventListener('click',()=>{
   const myNode = document.getElementById("table_container");
   myNode.innerHTML = '';
