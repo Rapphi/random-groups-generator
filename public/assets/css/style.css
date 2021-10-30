@@ -3,16 +3,62 @@ body {
   color: indigo;
 }
 
-body table {
+body header h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+body main #table_container {
   border: 2px solid black;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-body table tr {
-  border: 1px solid red;
-  background-color: gray;
+body main #table_container table {
+  border: 2px solid black;
+  margin: 1rem 1.5rem;
 }
 
-body table td {
+body main #table_container table caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+body main #table_container table tr {
+  margin-bottom: 1rem;
+}
+
+body main #table_container table td {
+  border: 1px solid gray;
+  text-align: center;
   background-color: lavender;
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,11 +3,14 @@
  * @param {String} array-array of element to insert in the rows 
  * @param {Number} size- numbers of colums
  */
-const createTable=(array,size)=>{ 
+const createTable=(array,index)=>{ 
     var trg = document.getElementById('table_container')
     var thead = document.createElement('table')
     var tbody = document.createElement("tbody")
+    let title = document.createElement('caption');
+    title.innerHTML="Team-"+index
     trg.appendChild(thead)
+    thead.appendChild(title)
     thead.appendChild(tbody)
     for (let y = 0; y < 2; y++) {
         let row = document.createElement('tr');
@@ -47,7 +50,7 @@ runBtn.addEventListener("click",()=>{
                 temp_array=temp_array.filter(x => !a.includes(x));
                 left--
               }
-            createTable(a)
+            createTable(a,(i+1))
           }
       }).catch(err => {
         // Do something for an error here

@@ -1,18 +1,51 @@
 body{
     background-color: honeydew;
     color: indigo;
-
-
-
-    table{
-        border:2px solid black;
-        tr{
-            border: 1px solid red;
-            background-color: gray;
-        }
-        td{
-            background-color: lavender;
+    header{
+        h1{
+            font-size: 3rem;
+            text-align: center;
+            margin: 0.5rem;
         }
     }
-
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-size: 2rem;
+            text-align: center;
+            margin: 0.5rem; 
+        }
+    
+    
+    #table_container{
+        border: 2px solid black;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display:flex ;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    
+        
+        table{
+        border:2px solid black;
+        margin: 1rem 1.5rem;
+        caption{
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        tr{
+        margin-bottom: 1rem;
+        }
+        td{
+            border: 1px solid gray;
+            text-align: center;
+        background-color: lavender;
+        }
+        }
+    
+    }
+    }
 }
