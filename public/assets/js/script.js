@@ -31,6 +31,7 @@ const createTable=(array,index)=>{
     }
 }
 const runBtn =document.getElementById("generate")
+const resetBtn =document.getElementById("reset")
 runBtn.addEventListener("click",()=>{
     //Ask for the database
     fetch('./assets/data/db.json').then(response => {
@@ -56,5 +57,9 @@ runBtn.addEventListener("click",()=>{
         // Do something for an error here
         console.log("Error Reading data " + err);
       });
+})
+resetBtn.addEventListener('click',()=>{
+  const myNode = document.getElementById("table_container");
+  myNode.innerHTML = '';
 })
 
