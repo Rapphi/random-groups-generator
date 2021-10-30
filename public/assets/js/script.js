@@ -12,23 +12,13 @@ const createTable=(array,index)=>{
     trg.appendChild(thead)
     thead.appendChild(title)
     thead.appendChild(tbody)
-    for (let y = 0; y < 2; y++) {
         let row = document.createElement('tr');
-        if (y== 0){
-            for (elem in array){
-            let cell = document.createElement('td');
-            cell.innerHTML = ("Name")
-            row.appendChild(cell);
-            }
-        }else{
         for (elem in array) {
             let cell = document.createElement('td');
-            cell.innerHTML = (array[elem].firstname)
+            cell.innerHTML = (array[elem].firstname)+" "+(array[elem].lastname)
             row.appendChild(cell);
             } 
-        }
         tbody.appendChild(row);
-    }
 }
 const runBtn =document.getElementById("generate")
 const resetBtn =document.getElementById("reset")
