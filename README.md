@@ -1,1 +1,1 @@
-# random-groups-generator
+# Random Group Generator v1.01

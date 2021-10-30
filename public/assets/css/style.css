@@ -1,0 +1,18 @@
+body {
+  background-color: honeydew;
+  color: indigo;
+}
+
+body table {
+  border: 2px solid black;
+}
+
+body table tr {
+  border: 1px solid red;
+  background-color: gray;
+}
+
+body table td {
+  background-color: lavender;
+}
+/*# sourceMappingURL=style.css.map */
