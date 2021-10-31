@@ -35,7 +35,7 @@ sizeinput.addEventListener("change",(e)=>{
 // Generate Table Button Listener
 runBtn.addEventListener("click",()=>{
     //Ask for the database
-    fetch('./assets/data/db.json').then(response => {
+    fetch('./assets/data/test.json').then(response => {
         console.log(response);
         return response.json();
       }).then(data => {
